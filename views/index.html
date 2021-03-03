@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/index.css">
+  <title>小财经</title>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>小 财 经</h1>
+      <div>
+        <time>{{time}}</time>
+        <h6>每天来点小小的财经新闻</h6>
+      </div>
+    </div>
+  </header>
+  <section class="container">
+    <ul>
+      {{each data}}
+      <li>
+        <div>
+          {{if $value.hot}}
+          <small>头条</small>        
+          {{/if}}
+          <a href="{{$value.href}}">{{$value.title}}</a>
+        </div>
+        <span>{{$value.tag}}</span>
+      </li>
+      {{/each}}
+    </ul>
+</section>
+<footer></footer>
+</body>
+</html>
