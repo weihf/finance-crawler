@@ -21,9 +21,9 @@
 
 ```sql
 -- 小财经
-CREATE DATABASE IF NOT EXISTS news character set gbk ;
+CREATE DATABASE IF NOT EXISTS finance_crawler character set gbk ;
 
-USE news;
+USE finance_crawler;
 
 -- 新闻列表
 CREATE TABLE list(
